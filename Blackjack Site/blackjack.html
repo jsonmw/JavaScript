@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/blackjack.css">
+    <script src="assets/scripts/blackjack.js" defer></script>
+    <title>JB's BJ</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-container nav-footer">
+          <h2 id="menu-header">BLACKJACK</h2>
+          <ul>
+            <!-- alt+shift+up/down to copy thenchange to add page and then add .html file to project -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="mission.html">Mission</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Controls all content between Navbar and Footer -->
+      <div class="page-container">
+
+          <!-- Header -->
+          
+          <section id = 'left-side'>
+
+          </section>
+
+          <section id = 'middle'>
+          <header>
+              <h1>JIMBO'S BLACKJACK</h1>
+          
+            </header>
+            
+            <main>
+              <section id="ask-to-play">
+                <h3>Would you like to play?</h3>
+                <button class="bj-btn" id="bj-play">HELL YEA</button>
+              </section>
+
+              <section id = "text-game" class="invisible">
+                <div class="computer-screen" id="computer-player-output"></div>
+                <div id="bj-scores">
+                  <div id="human-area bj-display-box">
+                    <p id="bj-box-title">YOU</p>
+                    <div id="human-score" class="computer-screen score-box"></div>
+                  </div>
+                  <div id="jimbo-area bj-display-box">
+                    <p id="bj-box-title">JIMBO</p>
+                    <div id="jimbo-score" class="computer-screen score-box"></div>
+                  </div>
+                  <div id="money-area bj-display-box">
+                    <p id="bj-box-title">FUNDS</p>
+                    <div id="money-box" class="computer-screen score-box"></div>
+                  </div>
+            
+                </div>
+                <div id="enter-bet-area">
+                  <p id="change-bet">CURRENT BET</p>
+                  <input type="text" id="bj-bet-input" class="bj-bet-saved" disabled="disabled"> 
+                  <button class="bj-btn submit-bet invisible" id="bet-changer">SAVE CHANGES</button>
+                </div>
+        
+                <div class="human-player-input">
+                  <h3 id="bj-prompt">What do you want to do?</h3>
+                  <button class="bj-btn new-exit-bj faded-input" id="bj-new-game-button">NEW GAME</button>
+                  <button class="bj-btn bj-input faded-input invisible" id="hit-button">HIT</button>
+                  <button class="bj-btn bj-input faded-input" id="stay-button">STAY</button>
+                  <button class="bj-btn bj-input faded-input" id="split-button">SPLIT</button>
+                  <button class="bj-btn bj-input faded-input" id="ddown-button">D DOWN</button>
+                  
+                  <br>
+                    <button class="bj-btn new-exit-bj" id="bj-new-player-button">NEW PLAYER</buton>
+                    <button class="bj-btn new-exit-bj" id="bj-exit-button">EXIT GAME</button>
+        
+                </div>
+                
+              </section>
+            </main>
+            </section>
+            <section id="right-side">
+              <div id="statistics" class="invisible">
+                <div id="statistics-frame">
+                <h2 id="statistics-header">STATISTICS</h2>
+                <div id="statistics-table">
+                  <div id="stat-categories">
+                    <p class="stat-category">WINS: </p>
+                    <p class="stat-category">LOSSES: </p>
+                    <p class="stat-category">WIN %: </p>
+                    <p class="stat-category">DRAWS: </p>
+                    <p class="stat-category">BJ (PL): </p>
+                    <p class="stat-category">BJ (JIMBO): </p>
+                    <p class="stat-category">HIGH WIN: </p>
+                    <p class="stat-category">HIGH LOSS: </p>
+                    <p class="stat-category">AVG WIN: </p>
+                    <p class="stat-category">HIGH BET: </p>
+                    <p class="stat-category">AVG BET:</p>
+                    <p class="stat-category">WIN-BET %:</p>
+                    <p class="stat-category">BJ%:</p>
+                    <p class="stat-category">BUST%: </p>
+                    <p class="stat-category">SPLIT%: </p>
+                    <p class="stat-category">DD%: </p>
+                  </div>
+                  <div id="stat-values">
+                    <p id="bj-wins" class="stat-value">-</p>
+                    <p id="bj-losses" class="stat-value">-</p>
+                    <p id="bj-win-rate" class="stat-value">-</p>
+                    <p id="bj-ties" class="stat-value">-</p>
+                    <p id="bj-bj-pl" class="stat-value">-</p>
+                    <p id="bj-bj-jimbo" class="stat-value">-</p>
+                    <p id="bj-high-winnings" class="stat-value">-</p>
+                    <p id="bj-high-loss" class="stat-value">-</p>
+                    <p id="bj-avg-winnings" class="stat-value">-</p>
+                    <p id="bj-high-bet" class="stat-value">-</p>
+                    <p id="bj-avg-bet" class="stat-value">-</p>
+                    <p id="bj-bet-win-rate" class="stat-value">-</p>
+                    <p id="bj-bj-rate" class="stat-value">-</p>
+                    <p id="bj-bust-rate" class="stat-value">-</p>
+                    <p id="bj-split-rate" class="stat-value">-</p>
+                    <p id="bj-dd-rate" class="stat-value">-</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </section>
+            
+    </div>
+            <!-- Footer -->
+      <footer class="nav-footer">
+        <p><strong><em>Thank you for playing my Blackjack!</strong></em></p>
+      </footer>      
+</body>
+</html>

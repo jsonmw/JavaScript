@@ -1,0 +1,287 @@
+:root {
+  --screen-color: #333;
+  --output-color: rgb(47, 187, 47);
+  --hover-color: rgb(20, 69, 109);
+}
+
+body {
+  overflow: scroll;
+  font-family: 'Roboto', sans-serif;
+}
+#body::-webkit-scrollbar {
+  display: none;
+}
+
+.page-container {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#left-side {
+  width: 25vw;
+  text-align: center;
+}
+#middle {
+  justify-content: center;
+  width: 50vw;
+  align-items: center;
+  text-align: center;
+}
+
+#right-side {
+  width: 25vw;
+  text-align: center;
+}
+
+header {
+  size: 5rem;
+  font-weight: bold;
+  letter-spacing: .5rem;
+  /* justify-content: center; 
+  align-items: center;  */
+  /* margin-bottom: 2rem; */
+}
+
+/* Game visibility */
+
+.invisible {
+  display: none;
+}
+
+/* Computer output styling */
+
+#text-game {
+  /* border: 3px solid #444; */
+  padding: 3rem;
+  flex: center;
+}
+
+.computer-screen {
+  background: var(--screen-color);
+  color: var(--output-color);
+  border: 3px solid #111;
+  border-radius: 5px;
+  padding: 1rem 0.5rem;
+  overflow: hidden;
+  font-weight: bold;
+  text-align: left;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1.25rem;
+}
+
+.computer-screen::-webkit-scrollbar {
+  display: none;
+}
+
+#computer-player-output {
+  margin: 0 auto 2rem;
+  height: 10rem;
+  width: 30rem;
+  overflow-y: scroll;
+}
+
+
+/* Score boxes */
+
+#bj-scores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 40vw;
+  margin: 0 5rem;
+}
+
+.bj-display-box {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+  align-items: center;
+  text-align: center;
+  margin: 0 2rem;
+  height: 2rem;
+}
+
+.score-box {
+  padding: .4rem;
+  text-align: center;
+  margin: 0 2rem;
+  width: 7rem;
+  height: 2rem;
+}
+
+#bj-display-box-title {
+  font-size: .75rem;
+}
+
+/* Blackjack Buttons */
+
+.human-player-input {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+#bj-prompt {
+  font-style: italic;
+}
+
+#bj-input-buttons {
+  margin-top: 0.5rem;
+}
+
+.bj-btn {
+  height: 2rem;
+  width: 4rem;
+  margin: 1rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  background: #f4f4f4;
+  transition: all .1s ease-in;
+  cursor: pointer;
+}
+
+.bj-btn:hover {
+  transform: scale(1.5);
+  background: var(--hover-color);
+  color: #fff;
+  opacity: 0.9;
+  border: 1px solid #333;
+}
+
+.faded-input {
+  opacity: 0.6;
+}
+
+/* Bet Changing Button */
+
+#enter-bet-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  height: 10vh;
+}
+
+#change-bet {
+  letter-spacing: .2rem;
+
+}
+
+#bj-bet-input {
+  background-color: #222;
+  border: 1px solid  white;
+  padding: 0.2rem;
+  width: 8rem;
+  color: white;
+  text-align: center;
+  border-radius: 5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  margin-top: .5rem;
+}
+
+#bj-bet-input:disabled {
+  background-color: black;
+}
+
+#bj-bet-input:focus {
+  font-size: 1.5rem;
+}
+
+#bj-bet-input.bj-bet-saved,
+#bj-bet-input.bj-bet-saved:focus {
+  border: none;
+  font-size: 1.5rem;
+  /* letter-spacing: .3rem; */
+}
+
+#bet-changer {
+  padding: .5rem;
+  width: fit-content;
+}
+
+.new-exit-bj {
+  margin-top: 2rem 0 rem;
+  height: 2rem;
+  width: 6.3rem;
+}
+.new-exit-bj:hover {
+  transform: scale(1.2);
+}
+
+.faded-input:hover {
+  opacity: 0.6;
+  background: #f4f4f4;
+  color: #333;
+  transform: none;
+  border: 1px solid #333;
+}
+
+#ask-to-play {
+  font-style: italic;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#bj-play {
+  margin: 2rem 0;
+  height: 4rem;
+  width: 6rem;
+}
+
+/* Statistics viewer */
+
+#bj-statistics {
+  flex: right;
+}
+
+#statistics-frame {
+  height:fit-content;
+  transition: all 0.2s ease;
+  margin-right: 4rem;
+  opacity: .5;
+  max-width: 25vh;
+}
+
+#statistics-frame:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+#statistics-header {
+  margin-top: 10vh;
+  font-size: .9rem;
+  letter-spacing: .3rem;
+  margin-bottom: .25rem;
+
+}
+
+#statistics-table {
+  font-size: .4em;
+  line-height: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  text-align: left;
+  padding: .5rem .5rem;
+
+  
+}
+
+#statistics-table {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  width: fit-content;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  background: #111;
+  margin: auto;
+}
+
+#stat-categories {
+  text-align: left;
+  margin-right: 5rem;
+}
+
